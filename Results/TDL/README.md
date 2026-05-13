@@ -29,3 +29,9 @@ A-MMSE is compared against baseline channel estimators including LS, ideal MMSE,
 | TDL-C | [TDLC_SNR.pdf](TDLC_SNR.pdf) |
 | TDL-D | [TDLD_SNR.pdf](TDLD_SNR.pdf) |
 | TDL-E | [TDLE_SNR.pdf](TDLE_SNR.pdf) |
+
+---
+
+### Online Adaptation Results
+
+Results for the online channel adaptation experiment (TDL-D → TDL-E) are in the [`Online/`](Online/) subfolder.
