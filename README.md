@@ -112,6 +112,7 @@ For actual testing/evaluation:
 
 Simulation results are organized in the [`Results/`](Results/) directory.
 
-| Channel Model | Results |
-|---------------|---------|
-| TDL (A–E), NMSE vs. SNR | [`Results/TDL/`](Results/TDL/) |
+| Experiment | Description | Link |
+|------------|-------------|------|
+| NMSE vs. SNR | A-MMSE performance across TDL-A to TDL-E channels over a wide SNR range | [`Results/TDL/`](Results/TDL/) |
+| Online Adaptation | NMSE tracking performance as the channel switches from TDL-D to TDL-E mid-stream, demonstrating real-time filter adaptation | [`Results/TDL/Online/`](Results/TDL/Online/) |
