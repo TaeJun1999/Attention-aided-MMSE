@@ -1,37 +1,20 @@
-## TDL Channel Estimation Results
+# TDL results
 
-This folder contains the NMSE vs. SNR simulation results of **A-MMSE** evaluated on 3GPP TDL (Tapped Delay Line) channel models (TDL-A through TDL-E).
+NMSE versus SNR on the 3GPP tapped delay line (TDL) channel models. TDL-A, TDL-B and TDL-C are NLOS profiles; TDL-D and TDL-E are LOS profiles.
 
----
+The figures compare A-MMSE and RA-A-MMSE (50%, 25%, 10% rank and rank 1) with LS, MMSE, 1D-MMSE, ChannelNet and Channelformer. A-MMSE outperforms the baselines on all five channel models.
 
-### About TDL Channel Models
+| TDL-A | TDL-B | TDL-C |
+|:---:|:---:|:---:|
+| ![TDL-A](TDLA_SNR.png) | ![TDL-B](TDLB_SNR.png) | ![TDL-C](TDLC_SNR.png) |
+| [TDLA_SNR.pdf](TDLA_SNR.pdf) | [TDLB_SNR.pdf](TDLB_SNR.pdf) | [TDLC_SNR.pdf](TDLC_SNR.pdf) |
 
-The 3GPP TDL channel models represent standardized multipath fading environments used in 5G NR link-level simulations:
+| TDL-D | TDL-E |
+|:---:|:---:|
+| ![TDL-D](TDLD_SNR.png) | ![TDL-E](TDLE_SNR.png) |
+| [TDLD_SNR.pdf](TDLD_SNR.pdf) | [TDLE_SNR.pdf](TDLE_SNR.pdf) |
 
-| Model | Delay Spread | Characteristics |
-|-------|-------------|-----------------|
-| TDL-A | High (~316 ns) | Non-line-of-sight (NLOS), rich scattering |
-| TDL-B | High (~316 ns) | NLOS, different power-delay profile |
-| TDL-C | Very high (~1000 ns) | NLOS, dense multipath |
-| TDL-D | Low (~30 ns) | Line-of-sight (LOS), strong direct component |
-| TDL-E | Very low (~5 ns) | Strong LOS, near-static channel |
+More results:
 
----
-
-### NMSE vs. SNR Results
-
-A-MMSE is compared against baseline channel estimators including LS, ideal MMSE, and DNN-based methods. Results demonstrate that A-MMSE consistently achieves near-optimal NMSE performance across all TDL models while maintaining low inference complexity through its single linear estimation step.
-
-| Channel | Figure |
-|---------|--------|
-| TDL-A | [TDLA_SNR.pdf](TDLA_SNR.pdf) |
-| TDL-B | [TDLB_SNR.pdf](TDLB_SNR.pdf) |
-| TDL-C | [TDLC_SNR.pdf](TDLC_SNR.pdf) |
-| TDL-D | [TDLD_SNR.pdf](TDLD_SNR.pdf) |
-| TDL-E | [TDLE_SNR.pdf](TDLE_SNR.pdf) |
-
----
-
-### Online Adaptation Results
-
-Results for the online channel adaptation experiment (TDL-D → TDL-E) are in the [`Online/`](Online/) subfolder.
+- SNR mismatch (filters trained at 0, 15, 30 dB): [`SNR_mismatch/`](SNR_mismatch/)
+- Online adaptation when the channel switches from TDL-D to TDL-E: [`Online/`](Online/)
